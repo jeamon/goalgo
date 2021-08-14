@@ -9,7 +9,7 @@ import (
 // Author   : Jerome AMON
 // Created  : 13 August 2021
 
-// this is a nice coding challenge that implements two approach to compute the digital root of a given 
+// this is a nice coding challenge that implements two approach to compute the digital root of a given
 // number. It consist of summing the digits of a number recursively until getting a number of digit.
 // example : digital_root(12) => 1 + 2 = 3 // digital_root(12.4) = 1 + 2 + 3 + 4 = 10 = 1 + 0 = 1
 
@@ -24,19 +24,17 @@ func digitalRootWithString(number int) int {
 	if len(s) == 1 {
 		return number
 	}
-	
+
 	// once here means - number has more than 1 digit inside.
 	// variables to store conversion and to avoid redeclaring
-	// new one for each iteration. 
+	// new one for each iteration.
 	var sum, digit int
-	var cstring string
-	
+
 	// loop over the string and add each character to the sum.
 	for _, c := range s {
-		// c is a rune type so lets convert into string type.
-		cstring = string(c)
-		// convert cstring from string to integer.
-		digit, _ = strconv.Atoi(cstring)
+		// c is a rune type so convert into string type.
+		// then convert from string to integer.
+		digit, _ = strconv.Atoi(string(c))
 		// add the digit to the sum.
 		sum = sum + digit
 	}
@@ -50,7 +48,7 @@ func digitalRootWithString(number int) int {
 func digitalRootWithModulo(number int) int {
 
 	//corner case - check if number with one digit.
-	if (10 - number > 0) {
+	if 10-number > 0 {
 		return number
 	}
 
@@ -59,12 +57,12 @@ func digitalRootWithModulo(number int) int {
 	var sum, remainder int
 	// perform euclidian division until quotient which
 	// is the number equals 0.
-	for number != 0 { 
+	for number != 0 {
 		// get the rest and add it to the sum.
-		remainder = number % 10  
+		remainder = number % 10
 		sum = sum + remainder
-	  	// result of euclidean division by 10 will be used for next iteration.
-	 	number = number / 10  
+		// result of euclidean division by 10 will be used for next iteration.
+		number = number / 10
 	}
 
 	// recursively perform on the sum value.
@@ -80,6 +78,7 @@ func main() {
 		fmt.Println() // make one line space.
 	}
 }
+
 /* Output:
 
 ~$ go run digital-root-algorithms.go
