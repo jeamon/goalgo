@@ -1,5 +1,12 @@
 package main
 
+// A short nice coding challenge to demonstrate Depth-First Search (DFS)
+// and Breadth-First Search (BFS) to check existence of a given node key.
+
+// Version  : 1.0
+// Author   : Jerome AMON
+// Created  : 24 October 2021
+
 import (
 	"fmt"
 )
