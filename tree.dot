@@ -1,0 +1,20 @@
+digraph Tree {
+	
+	{R0 [label="Root", shape=doublecircle, fontcolor=red]} -> {A0; B0; C0; D0;}
+	
+	A0 -> {A1; A11;}
+	A1 -> A2 -> A3 -> A4 -> L0A;
+	A11 -> A22 -> A33 -> A44 -> L1A;
+
+	B0 -> {B1; B11;}
+	B1 -> B2 -> B3 -> B4 -> L0B;
+	B11 -> B22 -> B33 -> B44 -> L1B;
+
+	C0 -> {C1; C11;}
+	C1 -> C2 -> C3 -> C4 -> L0C;
+	C11 -> C22 -> C33 -> C44 -> L1C;
+
+	D0 -> {D1; D11;}
+	D1 -> D2 -> D3 -> D4 -> L0D;
+	D11 -> D22 -> D33 -> D44 -> L1D;
+}
