@@ -13,9 +13,9 @@ import (
 // number. It consist of summing the digits of a number recursively until getting a number of digit.
 // example : digital_root(12) => 1 + 2 = 3 // digital_root(12.4) = 1 + 2 + 3 + 4 = 10 = 1 + 0 = 1
 
-// digitalRootWithString is a function that compute digital root of a given number
+// DigitalRootWithString is a function that compute digital root of a given number
 // it works by using only string-based approach to extract digits and sum them.
-func digitalRootWithString(number int) int {
+func DigitalRootWithString(number int) int {
 
 	// convert number from integer to string.
 	s := strconv.Itoa(number)
@@ -40,12 +40,12 @@ func digitalRootWithString(number int) int {
 	}
 
 	// recursively perform on the sum value.
-	return digitalRootWithString(sum)
+	return DigitalRootWithString(sum)
 }
 
-// digitalRootWithModulo is a function that compute digital root of a given number
+// DigitalRootWithModulo is a function that compute digital root of a given number
 // it works by using only mathematical approach based on modulo to extract digits.
-func digitalRootWithModulo(number int) int {
+func DigitalRootWithModulo(number int) int {
 
 	//corner case - check if number with one digit.
 	if 10-number > 0 {
@@ -66,15 +66,15 @@ func digitalRootWithModulo(number int) int {
 	}
 
 	// recursively perform on the sum value.
-	return digitalRootWithModulo(sum)
+	return DigitalRootWithModulo(sum)
 }
 
 func main() {
 	// sample numbers for testing purpose. each will be computed by each function.
 	numbers := []int{0, 123, 1234, 12, 45785, 1, 45}
 	for _, number := range numbers {
-		fmt.Printf(" [string func] digital root of %d is : %d\n", number, digitalRootWithString(number))
-		fmt.Printf(" [modulo func] digital root of %d is : %d\n", number, digitalRootWithModulo(number))
+		fmt.Printf(" [string func] digital root of %d is : %d\n", number, DigitalRootWithString(number))
+		fmt.Printf(" [modulo func] digital root of %d is : %d\n", number, DigitalRootWithModulo(number))
 		fmt.Println() // make one line space.
 	}
 }
