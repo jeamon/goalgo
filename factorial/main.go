@@ -23,7 +23,7 @@ func main() {
 // add below code into a file name factorial_test.go
 // to execute the test, see below example.
 
-~$ go test factorial.go factorial_test.go -v
+~$ go test main.go factorial_test.go -v
 === RUN   TestFactorial
 --- PASS: TestFactorial (0.00s)
 PASS

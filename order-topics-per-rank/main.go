@@ -69,5 +69,5 @@ func filerAndOrderBooksTopics(topics []string, rankings []string, baseRanking in
 }
 
 // program output
-// go run .\filter-order-topics.go
+// go run main.go
 // [sports maths games physics]

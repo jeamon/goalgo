@@ -142,7 +142,7 @@ func main() {
 /*
 // Ouput:
 
-~$ go run single-threaded-in-memory-database.go
+~$ go run main.go
 
 Welcome on the interactive in-memory database [use CTRL-C to quit]
 

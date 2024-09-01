@@ -48,7 +48,7 @@ func main() {
 	fmt.Printf("\n List of integers : %v \n Search results for value %d : (%v, index:[%d]) \n", input, value, found, index)
 }
 
-// go run binary-search.go
+// go run main.go
 // Output:
 // List of integers : [10 12 45 65 78 100 124 1230]
 // Search results for value 124 : (true, index:[6])

@@ -226,7 +226,7 @@ digraph Tree {
 
 // Output:
 
-{nxos-geek}:~$ go run navigate-search-into-non-binary-trees.go
+{nxos-geek}:~$ go run main.go
 => R0   => A0   => A1   => A2   => A3   => A4   => L0A
 => A11  => A22  => A33  => A44  => L1A
 => B0   => B1   => B2   => B3   => B4   => L0B

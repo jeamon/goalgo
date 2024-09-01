@@ -19,7 +19,7 @@ import (
 	"time"
 )
 
-// countLeavesSlices compute the number of empty slice into the tree of slices.
+// countLeavesSlices computes the number of empty slice into the tree of slices.
 func countLeavesSlices(input string) int {
 	return strings.Count(input, "[]")
 }
@@ -81,7 +81,7 @@ func main() {
 /*
 Output:
 
-~$ go run number-of-leaves-slices-into-tree.go
+~$ go run main.go
 
 [
    [

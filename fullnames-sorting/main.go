@@ -39,6 +39,6 @@ func main() {
 }
 
 /* output:
-[11:45:09] {nxos-geek}:~$ go run code-example.go
+[11:45:09] {nxos-geek}:~$ go run main.go
 [{jerome0 amon} {jerome1 amon} {jerome amon0} {jerome amon1} {jerome amon2}]
 */

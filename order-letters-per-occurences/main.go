@@ -60,6 +60,6 @@ func main() {
 	fmt.Println(reorder(str))
 }
 
-// go run ordering-letters-per-occurences.go
+// go run main.go
 // Output:
 // LLLLLKKKKMMRRRTTYSSHFFFFVVVEWPPG

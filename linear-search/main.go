@@ -33,7 +33,7 @@ func main() {
 	fmt.Println("\n List of integers :", input, "\n Search result :", result)
 }
 
-// go run sequential-searching.go
+// go run main.go
 // Output:
 // List of integers : [12 10 2 78 45 11]
 // Search result : true

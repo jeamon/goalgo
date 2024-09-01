@@ -55,7 +55,7 @@ func main() {
 	}
 }
 
-// go run pair-of-indexes-for-target-sum.go
+// go run main.go
 // Output:
 // found pair of indexes : (2, 7) => 10 + 90 = 100
 // found pair of indexes : (6, 7) => 10 + 90 = 100

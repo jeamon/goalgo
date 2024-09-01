@@ -100,7 +100,7 @@ func main() {
 
 /* Output:
 
-[17:54:38] {nxos-geek}:~$ go run validate-brackets-sequence.go
+[17:54:38] {nxos-geek}:~$ go run main.go
 
 [][] is valid sequence.
 [()(){}] is valid sequence.

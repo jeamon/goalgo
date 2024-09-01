@@ -111,7 +111,7 @@ func main() {
 	waitgroup.Wait()
 }
 
-// go run -race goroutines-race-free-even-odd-numbers-printing.go
+// go run -race main.go
 // Output:
 // Thread-1 :  1
 // Thread-2 :  2

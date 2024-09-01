@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("\n List of integers :", input, "\n Sum of elements :", result)
 }
 
-// go run summing-the-list.go
+// go run main.go
 // Output:
 // List of integers : [14 45 -4 10 23]
 // Sum of elements : 88

@@ -81,7 +81,7 @@ func main() {
 
 /* Output:
 
-~$ go run digital-root-algorithms.go
+~$ go run main.go
  [string func] digital root of 0 is : 0
  [modulo func] digital root of 0 is : 0
 
