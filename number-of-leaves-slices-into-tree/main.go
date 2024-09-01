@@ -27,12 +27,19 @@ func countLeavesSlices(input string) int {
 // buildTree constructs a tree with with n top level nodes based on random nodes models.
 func buildTree(n int) string {
 	// our node templates.
+	node := [0]int{}
 	models := map[int]interface{}{
-		1: [1]interface{}{[0]int{}},
-		2: [2]interface{}{[0]int{}, [0]int{}},
-		3: [3]interface{}{[0]int{}, [0]int{}, [2][0]int{[0]int{}, [0]int{}}},
-		4: [4]interface{}{[0]int{}, [0]int{}, [2][0]int{[0]int{}, [0]int{}}, [2][0]int{[0]int{}, [0]int{}}},
-		5: [5]interface{}{[0]int{}, [0]int{}, [0]int{}, [2][0]int{[0]int{}, [0]int{}}, [2][0]int{[0]int{}, [0]int{}}},
+		1: [1]interface{}{node},
+		2: [2]interface{}{node, node},
+		3: [3]interface{}{node, node, [2][0]int{node, node}},
+		4: [4]interface{}{node, node, [2][0]int{node, node}, [2][0]int{node, node}},
+		5: [5]interface{}{
+			node,
+			node,
+			node,
+			[2][0]int{node, node},
+			[2][0]int{node, node},
+		},
 	}
 
 	// https://pkg.go.dev/math/rand#Seed

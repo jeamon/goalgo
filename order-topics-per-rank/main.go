@@ -49,7 +49,7 @@ func filerAndOrderBooksTopics(topics []string, rankings []string, baseRanking in
 			}
 		}
 		if rank > baseRanking {
-			// vaid but higher rank value.
+			// valid but higher rank value.
 			continue
 		}
 		item := item{topic: topic, rank: rank}

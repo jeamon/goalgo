@@ -4,9 +4,9 @@ import (
 	"strings"
 )
 
-// GroupCharacter takes a string s and returns another string which
-// contains block(s) of 3 alphanumeric characters.Only the last
-// 2 blocks must be formed with 2 alphanumeric characters.
+// GroupCharacter takes a string s and returns another string which contains
+// block(s) of 3 alphanumeric characters. Spaces and hyphens are ignored.
+// Only the last 2 blocks could be formed with 2 alphanumeric characters.
 //
 // Examples :
 // JEROME4AMON2023 returns JER OME 4AM ON2 023
