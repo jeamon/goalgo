@@ -48,3 +48,73 @@ func SuggestedProducts(wordsList []string, searchWord string, maxSuggestions int
 
 	return allSuggestions
 }
+
+type Trie struct {
+	root *Node
+}
+
+type Node struct {
+	suggestions []string
+	children    map[rune]*Node
+}
+
+func NewNode() *Node {
+	return &Node{
+		suggestions: nil,
+		children:    make(map[rune]*Node),
+	}
+}
+
+func NewTrie() *Trie {
+	return &Trie{
+		root: &Node{
+			suggestions: nil,
+			children:    make(map[rune]*Node),
+		},
+	}
+}
+
+func (t *Trie) IndexWord(word string, maxSuggestions int) {
+	current := t.root
+	for _, char := range word {
+		if _, found := current.children[char]; !found {
+			current.children[char] = NewNode()
+		}
+
+		current = current.children[char]
+		if len(current.suggestions) < maxSuggestions {
+			current.suggestions = append(current.suggestions, word)
+		}
+	}
+}
+
+func (t *Trie) Suggestions(search string) [][]string {
+	allSuggestions := make([][]string, len(search))
+	for i := 0; i < len(allSuggestions); i++ {
+		allSuggestions[i] = []string{}
+	}
+	curent := t.root
+	for i, char := range search {
+		node, found := curent.children[char]
+		if !found {
+			break
+		}
+		allSuggestions[i] = append(allSuggestions[i], node.suggestions...)
+		curent = node
+	}
+	return allSuggestions
+}
+
+func BuildTrie(wordsList []string, maxSuggestions int) *Trie {
+	trie := NewTrie()
+	sort.Strings(wordsList)
+	for _, word := range wordsList {
+		trie.IndexWord(word, maxSuggestions)
+	}
+	return trie
+}
+
+func TrieSuggestedProducts(wordsList []string, searchWord string, maxSuggestions int) [][]string {
+	trie := BuildTrie(wordsList, maxSuggestions)
+	return trie.Suggestions(searchWord)
+}
