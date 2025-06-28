@@ -66,3 +66,23 @@ func TestFindMatches(t *testing.T) {
 		})
 	}
 }
+
+/*
+
+go test -timeout 30s -run ^TestFindMatches$ github.com/jeamon/goalgo/functions-matching -count=1 -v
+=== RUN   TestFindMatches
+=== RUN   TestFindMatches/case:1
+=== RUN   TestFindMatches/case:2
+=== RUN   TestFindMatches/case:3
+=== RUN   TestFindMatches/case:4
+=== RUN   TestFindMatches/case:5
+--- PASS: TestFindMatches (0.00s)
+    --- PASS: TestFindMatches/case:1 (0.00s)
+    --- PASS: TestFindMatches/case:2 (0.00s)
+    --- PASS: TestFindMatches/case:3 (0.00s)
+    --- PASS: TestFindMatches/case:4 (0.00s)
+    --- PASS: TestFindMatches/case:5 (0.00s)
+PASS
+ok      github.com/jeamon/goalgo/functions-matching     0.169s
+
+*/
