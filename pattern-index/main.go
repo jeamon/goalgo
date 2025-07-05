@@ -32,6 +32,7 @@ func IndexOf(pattern, text string) int {
 			for j := 1; j < m; j++ {
 				if text[i+j] != pattern[j] {
 					end = false
+					break
 				}
 			}
 			if end {

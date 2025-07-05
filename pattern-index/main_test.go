@@ -85,6 +85,6 @@ go test -timeout 30s -run ^TestIndexOf$ github.com/jeamon/goalgo/pattern-index -
     --- PASS: TestIndexOf/case:7 (0.00s)
     --- PASS: TestIndexOf/case:8 (0.00s)
 PASS
-ok      github.com/jeamon/goalgo/pattern-index  1.144s
+ok      github.com/jeamon/goalgo/pattern-index  0.267s
 
 */
